@@ -20,6 +20,25 @@
     }
     */
 
+    thead{
+        background-color: #6f4bd1;
+        color:#fff;
+    }
+    
+    tfoot{
+        background-color: #ffe552;
+        text-decoration: underline;
+    }
+    
+    /*
+    기존 테이블에도 스타일이 적용된다.
+    별도로 구조를 나누지 않으면 모두 tbody(본문)이라고 여겨진다.
+    tbody{
+        background-color: rgb(255, 254, 238);
+        font-size: 16px;
+    }
+    */
+
     </style>
 </head>
 
@@ -120,6 +139,41 @@
             <!-- <td></td> -->
             <!-- <td></td> -->
         </tr>
+    </table>
+
+    
+    <h3>표 구조태그</h3>
+    <table border="1"> <!-- thead, tbody, tfoot : 표의 구조를 정의하는 태그. -->
+        <thead> <!-- 표의 제목 영역 -->
+            <tr>
+                <th>이름</th>
+                <th>나이</th>
+                <th>주소</th>
+            </tr>
+        </thead>
+        <tbody class=""> <!-- 표의 본문 영역 -->
+            <tr>
+                <td>문인수</td>
+                <td>22</td>
+                <td>경기도 파주시</td>
+            </tr>
+            <tr>
+                <td>홍길동</td>
+                <td>24</td>
+                <td>서울특별시</td>
+            </tr>
+            <tr>
+                <td>이몽룡</td>
+                <td>24</td>
+                <td>서울특별시</td>
+            </tr>
+        </tbody>
+        <tfoot> <!-- 표의 요약 영역 -->
+            <tr>
+                <th colspan="2">총 인원</th>
+                <td>3명</td>
+            </tr>
+        </tfoot>
     </table>
 </body>
 </html>
