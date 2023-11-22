@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제1_글자태그_목록태그</title>
+</head>
+<body>
+    <h1>자바(Java) 학습내용</h1>
+    <h3>담당 강사 : 문인수</h3>
+    <p>이메일 : ismoon@iei.or.kr</p>
+    <hr>
+
+    <!-- 
+        EMMET 약어 사용하기(EMMET은 작성을 해야 먹힌다)
+        ul>li*5 
+        <ul></ul>안에  <li>5개가 만들어짐
+
+        ul>li>s
+        <ul> <li> <s><s> </li> </ul> 이렇게 생성됨
+
+        ol>(li>mark)+li*4
+        <ol></ol>안에 <mark>가 포함된<li>1개와 <li>4개가 만들어짐
+
+        ol[type="i"]>li*3
+        <ol type ="i"></ol>안에 <li>3개가 만들어짐
+    -->
+    <ul>
+        <li>
+            프로그래밍 언어
+            <ul> <!-- ul>li>s -->
+                <li><s>Java</s></li>
+            </ul>
+        </li>
+        <li>데이터베이스</li>
+            <ul> <!-- ul>li>s -->
+                <li><s>Oracle</s></li>
+            </ul>
+        <li>
+            화면구현
+            <ol> <!-- ol>(li>mark)+li*4 -->
+                <li><mark>HTML5</mark></li>
+                <li>CSS3</li> 
+                <li>JavaScript</li> 
+                <li>jQuery</li>
+                <li>React</li> 
+            </ol>
+        </li>
+        <li>
+            서버 개발 기술
+            <ol type ="i"> <!-- ol[type="i"]>(li>s)+li*3 -->
+                <li><s>JDBC</s></li>
+                <li>Servelt</li>
+                <li>JSP</li>
+                <li>AJAX</li>
+            </ol>
+        </li>
+        <li>
+            프레임워크
+            <ol> <!-- ol>li+(li>strong) -->
+                <li>MyBatis</li>
+                <li><strong>Spring </strong></li>
+            </ol>
+        </li>
+    </ul>
+
+</body>
+</html>

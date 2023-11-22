@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 관련 태그</title>
+    <style>
+    /*
+        style => CSS 스타일시트
+        셀렉터 {
+            속성명: 값;
+            속성명: 값;
+            ...
+        }
+
+     td{
+        //table의 td에 넓이 80px, 높이 80px의 속성을 주겠다
+        width: 80px;
+        height :80px;
+    }
+    */
+
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Emmet은 table 에서도 가능!
+        table>tr*2>td*4 이런식으로
+    -->
+    <h2>표 관련 태그</h2>
+
+    <h3>기본적인 표 만들기</h3>
+    <!-- border : 표의 테두리 두께-->
+    <table border = "1"> <!-- 실제 테이블의 시작과 끝 표시-->
+        <caption>웹 브라우저의 종류</caption> <!-- caption : 표의 제목 (표의 위쪽 가운데 정렬)-->
+        <tr> <!-- tr : 행 표시 (tr의 개수에 따라 행의 개수가 정해짐)-->
+            <th>브라우저명</th> <!--th : 표의 제목셀 (가운데 정렬, 글자 굵게가 기본)-->
+            <th>제조사</th>
+            <th>홈페이지</th>
+        </tr>
+        <tr>
+            <td>엣지</td> <!-- td : 표의 일반 셀 (td/th의 개수에 따라 열의 개수가 정해짐)-->
+            <td>MS</td>
+            <td>https://www.microsoft.com</td>
+        </tr>
+        <tr>
+            <td>크롬</td>
+            <td>Google</td>
+            <td>https://www.goodle.com</td>
+        </tr>
+        <tr>
+            <td>사파리</td>
+            <td>Apple</td>
+            <td>https://www.apple.com</td>
+        </tr>
+    </table>
+    <p></p> <!-- 한칸띄기용 ㅎㅎ-->
+
+    <figure><!-- figure태그로 감싸고 figcaption 넣기-->
+        <figcaption>- 셀 합치기 -</figcaption>
+        <!-- figcaption : 표에 대한 설명 작성. 작성하는 위치에 따라 표의 위/아래에 표시. 중앙은 표시 안됨. 표중앙에 표시 안됨.-->
+        <table border ="1">
+            <!-- rowspan, colspan은 쓰면 합치는 행과 열의 개수만큼 다른 행/열을 입력하면 안된다. -->
+            <tr>
+                <td rowspan="2" >1</td> <!-- rowspan 은 세로로 합치기. 여기서 합치는 개수의 숫자는 자기포함해서 갯수를 샌다.-->
+                <td colspan ="2">2</td> <!-- colspan 은 가로로 합치기-->
+                <!-- colspan ="2" 이므로 여기 td 1개 생략-->
+                <!-- <td></td> -->
+            </tr>
+            <tr>
+                <!-- rowspan ="2" 이므로 여기 td 1개 생략-->
+                <!-- <td></td> -->
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+            </tr>
+            <tr>
+                <td colspan ="3">10</td>
+                <!-- colspan ="2" 이므로 여기 td 2개 생략-->
+                <!-- <td></td> -->
+                <!-- <td></td> -->
+            </tr>
+        </table>
+        <figcaption>이 표는 셀 합치기에 대한 내용을 정리한 표 입니다.</figcaption>
+        <figcaption>설명 내용을 여러 줄로 표기할 수 있습니다.</figcaption>
+    </figure>
+
+
+    <h3>표의 행과 열 합치기</h3>
+    <h4>회원 정보</h4>
+    <!-- table[border="1"]>tr*4>td*4 -->
+    <!-- table[border="1"]>(tr>td*4)*4 -->
+    <table border="1">
+        <tr>
+            <td colspan="2" rowspan="2" width ="130px" height="130px">사진</td>
+            <!-- <td></td> -->
+            <td width ="80px">이름</td> <!--width, height를 직접 넣어줄수있음.-->
+            <td width ="200px"></td>
+        </tr>
+        <tr>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+            <td>연락처</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td width="65px" height="50px">주소</td>
+            <td colspan="3"></td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+        </tr>
+        <tr>
+            <td height="120px">자기소개</td>
+            <td colspan="3"></td>
+            <!-- <td></td> -->
+            <!-- <td></td> -->
+        </tr>
+    </table>
+</body>
+</html>
