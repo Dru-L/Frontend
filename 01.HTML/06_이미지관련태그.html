@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 관련 태그</title>
+</head>
+<body>
+    <h2>이미지 관련 태그</h2>
+    <h3>img 태그</h3>
+    <h3>src 태그</h3>
+    <img width ="300px" src="../resources/image/city1.PNG" alt="도시풍경">
+    <img width ="500px" src="https://img.hankyung.com/photo/202307/AKR20230719120700017_02_i_P4.jpg" alt="잠만보">
+    
+    <h4>alt 속성</h4>
+    <img src="../resources/image/flower11.PNG" alt="벚꽃사진">
+
+    <h4>width, height 속성</h4>
+    <h5>고정 크기 단위</h5>
+    <img width="200" height="150" src="../resources/image/flower1.PNG" alt="벚꽃사진">
+    <img width="200px" height="150px" src="../resources/image/flower1.PNG" alt="벚꽃사진">
+    <img width="200px" src="../resources/image/flower1.PNG" alt="벚꽃사진">
+    <img height="150px" src="../resources/image/flower1.PNG" alt="벚꽃사진">
+
+    <h5>가변 크기 단위</h5>
+    <img width="25%" src="../resources/image/flower2.PNG" alt="꽃사진">
+    <img height="15%" src="../resources/image/flower2.PNG" alt="꽃사진">
+
+    <!--
+        <img src="이미지 파일 경로" usemap="#map">
+
+        <map name="map">
+            <area shape="모양" coords="시작 위치, 끝 위치" href="링크 경로" target="위치">
+            <area shape="모양" coords="시작 위치, 끝 위치" href="링크 경로" target="위치">
+        </map>
+    -->
+    <h3>이미지 맵</h3>
+    <h4>이미지 구역을 2개로 나누어 각각 링크 설정</h4>
+    <img usemap="#circle_map" width ="600px" height="300px" src="https://img.hankyung.com/photo/202307/AKR20230719120700017_02_i_P4.jpg" alt="잠만보">
+    
+    <map name="rect_map">
+        <!-- shape: 영역의 모양 / coords : 영역지정(이미지의 x(왼쪽상단),y(오른쪽하단) 좌표 지정)-->
+        <area shape="rect" coords="0,0, 300,300" href="https://www.naver.com" target="_self">
+        <area shape="rect" coords="300,0, 600,300" href="https://google.com" target="_blank">
+    </map>
+
+    <map name="circle_map">
+        <!-- circle의 coords : 시작점(x,y) , 반지름-->
+        <area shape="circle" coords="300, 150, 100" href="https://www.daum.net">
+    </map>
+</body>
+</html>

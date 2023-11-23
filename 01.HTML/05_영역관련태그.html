@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>영역 관련 태그</title>
+    <style>
+        div{
+            border: 1px solid #000;
+            /* background-color: #fdd20d; */
+        }
+
+        span{
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h2>영역 관련 태그</h2>
+    <h3>div 태그와 span 태그의 차이 1</h3>
+    <h4>div 태그</h4>
+    <!--
+        div 태그
+            블록 레벨 요소의 태그로 레이아웃 분할을 위해 사용한다.
+            콘텐츠가 없으면 높이는 0, 너비는 100%이다.
+
+        span 태그
+            인라인 레벨 요소의 태그로 콘텐츠를 감싸는 역할을 한다.
+            콘텐츠가 없으면 높이는 0, 너비도 0이다.
+    -->
+
+    <!-- div{$ 번째 영역}*3 -->
+    <div>1 번째 영역</div>
+    <div>2 번째 영역</div>
+    <div>3 번째 영역</div>
+
+    <h4>span 태그</h4>
+
+    <!-- span*3{$ 번째 영역} -->
+    <span>1 번째 영역</span>
+    <span>2 번째 영역</span>
+    <span>3 번째 영역</span>
+
+    <h3>iframe</h3>
+
+    <!--
+        상대 경로
+            현재 파일을 기준으로 상대적인 경로를 지정하는 방법
+                현재 파일과 동일할 경로일때 
+                    src="04_표관련태그.html"
+                    src="./04_표관련태그.html" 
+                현재 파일의 하위 경로일때
+                    src="./하위폴더명/04_표관련태그.html" 
+                현재 파일의 상위 경로일때
+                    src="../04_표관련태그.html" 
+    -->
+    <iframe src="04_표관련태그.html" width ="500px" height="500px"></iframe>
+    <!-- <iframe src="./04_표관련태그.html" width ="500px" height="500px"></iframe> -->
+    <!-- <iframe src="./목록관련/04_표관련태그.html" width ="500px" height="500px"></iframe> -->
+    <!-- <iframe src="../04_표관련태그.html" width ="500px" height="500px"></iframe> -->
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/et3VDbL7cIA?si=qjv9aO7NIxju0TnR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</body>
+</html>

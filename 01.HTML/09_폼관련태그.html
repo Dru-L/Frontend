@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 관련 태그</title>
+</head>
+<body>
+    <h2>폼 관련 태그</h2>
+    <h3>검색 폼</h3>
+
+    <form name="search_form" action="" method="get"> <!-- 검색기능은 get, 아이디, 비밀번호는 post 방식-->
+        <label for ="keyword"> 검색할 내용 : </label>
+        <input type="text" name="search_keyword" id="keyword" autocomplete="off"> <!--autocomplete : 검색했던 기록으로 자동완성기능-->
+        <!--
+            name 속성
+                form 태그 안에서 input 태그들을 구분하는 역할을 한다.
+                서버로 값을 전달할 떄 name 속성과 사용자가 입력한 값을 묶어서 전송한다.(name = value)
+        -->
+        <input type="submit" value="검색">
+        <!-- 
+            submit 버튼을 눌렀을 때
+            action 속성에서 지정한 서버로 사용자가 입력한 값들을
+            method 속성에 지정된 전송 방식으로 전송한다.
+        -->
+    </form>]
+
+    <h3>회원가입 폼</h3>
+    <form name="signup_form" method="get">
+        <fieldset> <!--form요소를 그룹으로 묶는 태그-->
+            <legend>회원정보</legend> <!--그룹으로 묶은 폼 요소에 제목 붙이기-->
+            <label for="userId">아이디 : </label>
+            <input type="text" name ="userID" id="userId" autofocus required placeholder="아이디">
+            <!--
+                required : 필수로 입력해야하는 태그
+                autofocus : 요소에 마우스 커서를 표시
+                readonly : 읽기 전용 설정
+                placeholder : 텍스트 입력에 도움이 되는 텍스트
+            -->
+
+            <br><br>
+
+            <label for="userPwd">비밀번호 :</label>
+            <input type="password" name="userPwd" id="userPwd" required placeholder="비밀번호">
+        </fieldset>
+
+        <fieldset>
+            <legend>배송정보</legend>
+            <label for="userName">수령인 : </label>
+            <input type="text" name ="userName" value="홍길동" id="userName"> <!--value : 기본값 설정-->
+
+            <br><br>
+
+            <label for="address">주소 : </label>
+            <input type="text" name="address" id="address" autocomplete="off">
+        </fieldset>
+
+        <br><br>
+        <input type="submit" value="회원가입"> <!--value에 쓰는 값이 버튼의 text-->
+        <!--같은 폼의 input에 있는 데이터를 저장-->
+        <input type="reset" value="초기화">
+        <!--같은 폼의 input에 있는 데이터를 취소-->
+    </form>
+</body>
+</html>
