@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제 4</title>
+    <style>
+        input{
+            padding:3px 10px;
+        }
+        #order_b{
+            cursor: pointer;
+            padding: 5px 20px;
+            font-size: 15px;
+            background-color: #333;
+            border: none;
+            color:#fff;
+        }
+        #order_b:hover{
+            background-color: #1aa5af;
+        }
+
+        textarea{
+            resize: none;
+            padding:7px 10px;
+        }
+
+        #d-time{
+            cursor:pointer;
+            color: #1aa5af;
+            padding: 2px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>주문하기</h2>
+    <form method="get">
+        <label for="name">고객명 : </label>
+        <input type="text" name="name" id="name" required>
+        <br><br>
+        <label for="phnum">전화번호 : </label>
+        <input type="tel" name="phnum" id="phnum" required>
+        <br><br>
+        <label for="email">E-mail : </label>
+        <input type="email" name="email" id="email">
+        <br><br>
+        <fieldset>
+            <legend>피자 사이즈</legend>
+            <label><input type="radio" name="pizza" value="S">Small</label>
+            <br><br>
+            <label><input type="radio" name="pizza" value="M">Medium</label>
+            <br><br>
+            <label><input type="radio" name="pizza" value="L">Large</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>토핑 선택</legend>
+            <label><input type="checkbox" name="toppings" value="bacon">베이컨</label>
+            <br><br>
+            <label><input type="checkbox" name="toppings" value="cheese">치즈</label>
+            <br><br>
+            <label><input type="checkbox" name="toppings" value="onion">양파</label>
+            <br><br>
+            <label><input type="checkbox" name="toppings" value="mushroom">버섯</label>
+        </fieldset>
+        <br>
+        <label for="d-time">희망 배송 시간 :</label>
+        <input type="time" name="d-time" id="d-time" required placeholder="hh:mm:">
+        <br><br>
+        <!-- <label for="delivery-text">배송시 요청사항 : </label> -->
+        <textarea name="delivery-text" id="delivery-text" cols="30" rows="4" placeholder="배송 시 요청사항"></textarea>
+
+        <br><br>
+        <button type="submit" id="order_b">주문하기</button>
+    </form>
+</body>
+</html>
