@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자 1</title>
+    <!--
+        내부 스타일 시트
+            현재 문서의 <style>태그 내부에 스타일 정보를 저장하는 방법이다.
+    -->
+    <style>
+        /* CSS 주석 */
+        /* 전체 선택자 */
+        /* *{
+            color:#ff0000;
+        } */
+
+        /* 태그 선택자 */
+        p {
+            color: #0b970b;
+            text-decoration: underline;
+            font-size: 15pt;
+            font-weight: bold;
+        }
+
+        /* 아이디 선택자 */
+        #id1 {
+            background-color: #fff12b;
+            color: #0b970b;
+        }
+
+        #id2 {
+            background-color: #ffdf2b;
+            color: rgb(20, 31, 190)
+        }
+
+        #id3 {
+            background-color: #ffce2b;
+            color: #350b97;
+        }
+
+        #id4 {
+            background-color: #ffbc2b;
+            color: #640b97;
+        }
+
+        /*클래스 선택자*/
+        .test1 {
+            background-color: #ffdcb2;
+            color: #db3d16;
+        }
+        .test2{
+            background-color: #ffb2e5;
+            color: #ffffff;
+        }
+        .test{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS 선택자 1</h2>
+    <p>
+        선택자란? <br>
+        특정 HTML요소를 선택할 때 사용하는 기능으로,
+        요소를 선택하여 원하는 스타일을 적용할 수 있다.
+    </p>
+
+    <h3>1. 전체 선택자</h3>
+    <p>
+        HTML문서 내부에 모든 태그를 선택 할 때 사용한다.
+    </p>
+    <pre>
+        * {
+            스타일 속성: 값;
+            스타일 속성: 값;
+            ...
+        }
+    </pre>
+
+    <h3>2. 태그 선택자</h3>
+    <p>
+        HTML 문서 내부에 같은 태그를 모두 선택할 때 사용한다.
+    </p>
+    <pre>
+        태그명 {
+            스타일 속성: 값;
+            스타일 속성: 값;
+            ...
+        }
+    </pre>
+
+    <h3>3. 아이디 선택자</h3>
+    <p>
+        HTML 문서 내부에 해당하는 아이디 속성값을 가진 태그만 선택할 때 사용한다.
+    </p>
+    <pre>
+        #아이디 {
+            스타일 속성: 값;
+            스타일 속성: 값;
+            ...
+        }
+    </pre>
+    <!-- ol>li#id$*4{아이디 선택자 테스트 $} -->
+    <ol>
+        <li id="id1">아이디 선택자 테스트 1</li>
+        <li id="id2">아이디 선택자 테스트 2</li>
+        <li id="id3">아이디 선택자 테스트 3</li>
+        <li id="id4">아이디 선택자 테스트 4</li>
+    </ol>
+
+    <h3>4. 클래스 선택자</h3>
+    <p>
+        HTML 문서 내부에 해당하는 클래스 속성값을 가진 태그들을 선택할 때 사용한다.
+    </p>
+    <pre>
+        .클래스 {
+            스타일 속성: 값;
+            스타일 속성: 값;
+            ...]
+        }
+    </pre>
+    <ul>
+        <li class="test1">클래스 선택자 테스트 1</li>
+        <li class="test2 test">클래스 선택자 테스트 2</li>
+        <li class="test1 test">클래스 선택자 테스트 3</li>
+        <li class="test2">클래스 선택자 테스트 4</li>
+        <li class="test1">클래스 선택자 테스트 5</li>
+    </ul>
+</body>
+</html>

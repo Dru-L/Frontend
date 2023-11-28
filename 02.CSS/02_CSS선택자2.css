@@ -1,0 +1,236 @@
+/* * {
+    color: #0ea138
+} */
+
+/*속성 선택자*/
+/*div 중 name 속성을 가지고 있는 (태그)요소 선택*/
+/* div[name]{
+    background-color: #ffa12f;
+} */
+
+/* div 중 name 속성이 값이 name1과 일치하는 (태그)요소 선택 */
+div[name=name1]{ /* 실제 내가 가지고 있는 값이 완전히 동일해야한다.*/
+    background-color: #3569c9;
+}
+
+/* div 중에 name 속성값이 name1이거나 name1이 포함되어 있는 태그(요소) */
+div[name~=name1]{
+    background-color: #fff647;
+}
+
+/* div 중에 class 속성값이 class이거나 class로 시작되는 태그(요소) 선택(단, -로 구분) */
+div[class|=class]{
+    background-color: #58e7b7;
+}
+
+/* div 중에 class 속성값이 div으로 시작되는 태그(요소) 선택 */
+/* div[name^=name] {
+    background-color: #0547c0;
+} */
+div[class^=div] {
+    background-color: #0547c0;
+}
+
+/* div 중에 class 속성값이 class로 끝나는 태그(요소)선택 */
+div[class$=class]{
+    color: #fff;
+}
+
+/* div 중에 class 속성값에 i를 표함하는 태그(요소)선택 */
+div[class*=i]{
+    background-color: #bbff7c;
+    color: #ff0000;
+}
+
+/*
+    클래스 속성의 값이 div-class 인 태그(요소) 중 name 속성값에 name3가 포함되어있는 태그(요소)선택
+    (단, 속성값이 띄어쓰기로 구분)
+*/
+.div-class[name*=name3]{
+/*div[class=div-class][name*=name3]*/
+    background-color: #05bac0;
+    color:#fff;
+}
+
+/* 자식 선택자 / 후손 선택자 */
+#test1>h4 {
+    background-color: #ff953e;
+}
+
+#test1>ul>h4 {
+    background-color: #c95e5e;
+}
+
+#test1>ul>li {
+    background-color: #bafae1;
+}
+
+#test1 h4{
+    color:#fff;
+}
+
+#test1 li{
+    color: #943a10
+}
+
+/* 형제선택자 */
+#test2 {
+    background-color: #ff0000;
+}
+
+#test2+div{ /*형제요소 중에서 바로 뒤에 한개만 선택*/
+    background-color: #0547c0;
+}
+
+#test2+div~div{  /* 그 이후에 나오는 나머지 형제요소를 선택*/
+    background-color: #000;
+    color:#fff;
+}
+
+
+/* 반응 선택자*/
+#test3, #test4{
+    background-color: #9acd32;
+    width: 300px;
+    height: 300px;
+}
+
+#test3:active{ /*active: 클릭했을 때*/
+    background-color: #fff647;
+    color: #ff0000;
+}
+
+#test4:hover{ /*hover:마우스를 올려놨을때*/
+    background-color: #0547c0;
+    color:#fff;
+    cursor: pointer;
+}
+
+/* #userId:focus, #userPwd:focus{ */
+/* input[name^=user]:focus{ */
+input[name*=user]:focus{
+    border: 5px solid #ff0000;
+    color:#3569c9;
+}
+
+
+/* 상태 선택자 */
+input[type=checkbox]:checked {
+    width: 20px;
+    height: 20px;
+}
+
+input[type=checkbox]:checked+label {
+    font-size: 20px;
+}
+
+button:enabled{
+    background-color: #9acd32;
+    border:none;
+}
+
+button:enabled:active{
+    background-color: #fff647;
+}
+
+button:disabled{
+    background-color: #888;
+    color: #fff;
+}
+
+
+/* 구조 선택자 */
+/* 형제 관계 태그 중 첫번째 태그 선택 */
+#test5 p:first-child{
+    background-color: #3569c9;
+    color: #fff
+}
+
+/* 형제 관계 태그 중 마지막 태그 선택 */
+/* 마지막 자식이 p 태그가 아니여서 스타일이 적용되지 않는다. */
+#test5 p:last-child{ /*위치가 항상 부모의 마지막이어야 적용됨.*/
+    background-color: #05bac0;
+    color: #fff;
+}
+
+/*형제 관계 태그 중 앞에서 수열 번째 태그 선택*/
+/* #test5 p:nth-child(2){ */
+/* 수식을 사용하거나 odd, even를 대입해 줄 수 있다. */
+/*#test5 p:nth-child(2n){   -- 2n -> 2,4,6,8,...*/
+/* #test5 p:nth-child(2n+1){ -- 홀수 */
+/* #test5 p:nth-child(odd){  -- 홀수 */
+#test5 p:nth-child(even){ /*짝수*/
+    background-color: #05bac0;
+    color: #fff;
+}
+
+/* 형제 관계 태그 중 뒤에서 4번째 태그 선택 */
+#test5 p:nth-last-child(4){
+    background-color: #7ef0ca;
+    color:#0547c0;
+}
+
+/* 형제 관계 태그 중 첫번째 태그 선택 */
+#test6 p:first-of-type{ /*p태그 중 첫번째*/
+    background-color: #c95e5e;
+    color: #fff;
+}
+
+/* 형제 관계 태그 중 마지막 태그 선택 */
+#test6 p:last-of-type{ 
+    background-color: #943a10;
+    color: #fff;
+}
+
+/*형제 관계 태그 중 앞에서 수열 번째 태그 선택*/
+#test6 p:nth-of-type(even){
+    background-color: #ffa48e;
+}
+
+/* 형제 관계 태그 중 뒤에서 4번째 태그 선택 */
+#test6 p:nth-last-of-type(4){
+    background-color: #f06441;
+    color:#fff;
+}
+
+
+/*문자 선택자 */
+/* 첫 번쨰 글자를 선택해서 스타일 적용 */
+#test7 p::first-letter{
+    font-size: 20px;
+}
+
+/* 첫번째 라인을 선택해서 스타일 적용 */
+#test7 p::first-line{
+    background-color: #fff3dc;
+}
+
+/* 선택된 요소 내용 앞에 공간을 선택해서 스타일 적용 */
+#test7 p::before{
+    content: "1. ";
+    color:#ff953e;
+    font-weight: bold;
+}
+
+/* 선택된 요소 내용 뒤에 공간을 선택해서 스타일 적용 */
+#test7 p::after{
+    content: "The End.";
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* 사용자가 드래그한 글자를 선택해서 스타일 적용 */
+#test7 p::selection{
+    background-color: #9acd32;
+    color: #fff;
+}
+
+
+/* 부정 선택자 */
+/* #test8 p:not(.p){ */
+/* #test8 p:not(:last-child){ */
+/* #test8 p:not(:nth-child(even)){ */
+#test8 p:not(:nth-child(odd)){
+    background-color: #7ef7ce;
+    color: #74350b;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자 우선순위</title>
+    <style>
+        h2{
+            color: yellow;
+        }
+
+        h2{
+            background-color: cadetblue;
+            color: #fff;
+        } /* 우선순위가 같은 경우에는 마지막으로 적힌 css가 적용된다.*/
+
+        #test1{
+            background-color: pink;
+        }
+
+        .test1{
+            background-color: burlywood; /*우선 순위가 더 높은 id 선택자에서 지정해줬기 때문에 적용 안됨*/
+            color: #ffffff;
+        }
+
+        div{ /*우선순위가 가장 낮으므로 넓이, 높이만 적용됨*/
+            width: 300px;
+            height: 300px;
+            background-color: orangered !important; /*무조건 우선으로 적용되도록 */
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS 선택자 우선순위</h2>
+    <p>
+        기본적으로 CSS 스타일은 위에서부터 아래로 적용이 되지만,<br>
+        같은 태그에 다양한 선택자로 CSS 스타일이 설정된 경우에는 우선순위에 따라 스타일이 적용된다.
+
+        <br><br>
+
+        !important &gt; 인라인 스타일 &gt; id 선택자 &gt; 클래스 선택자 &gt; 태그 선택자
+    </p>
+
+    <h3>선택자 우선순위 테스트</h3>
+    <div id="test1" class="test1" style="background-color: yellowgreen;">우선순위 테스트 1</div>
+</body>
+</html>
