@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>색상 스타일</title>
+    <style>
+        /*background-color, background-clip*/
+        .bg-clip{
+            border: 15px dashed rgba(0,0,0,.3);
+            width: 30%;
+            height: 300px;
+            margin: 20px;
+            padding: 30px;
+            /* background-color: aqua; */
+            /* background-color: #aae6ff; */
+            /* background-color: hsl(271, 100%, 85%); */
+            background-color: hsla(347, 100%, 76%, 0.3);
+        }
+
+        #bg-clip1{
+            background-clip: border-box;
+        }
+
+        #bg-clip2{
+            background-clip: padding-box; /*padding영역까지 적용*/
+        }
+
+        #bg-clip3{
+            background-clip: content-box; /*content영역까지 적용 */
+        }
+
+        /* background-image, background-repeat, background-size, background-position, background-orgin, background-attachment */
+        #bg-img{
+            width: 80%;
+            height: 750px;
+            padding: 50px;
+            border:15px dashed rgba(0,0,0,.3);
+            background-image: url("https://img.etnews.com/news/article/2019/05/13/cms_temp_article_13164218086216.jpg");
+            
+            /* 이미지 반복 설정 */
+            /* background-repeat: repeat; */
+            /* background-repeat: repeat-x; 가로 축으로만 반복 */
+            /* background-repeat: repeat-y; 세로 축으로만 반복 */
+            background-repeat: no-repeat;
+
+            /* 이미지 크기 설정 */
+            background-size: auto;
+            /* background-size: contain; 요소 안에 배경 이미지가 들어가도록(한명 채워질때까지) */
+            /* background-size: cover; 배경 이미지가 요소를 다 덮을때까지 */
+            /* background-size: 300px 250px; */
+            /* background-size: 100% 100%; */
+
+            /*이미지 위치 설정*/
+            /* background-position: left top; */
+            /* background-position: center top; */
+            /* background-position: right top; */
+            /* background-position: left center; */
+            /* background-position: center; */
+            /* background-position: right center; */
+            /* background-position: left bottom; */
+            /* background-position: center bottom; */
+            /* background-position: right bottom; */
+            /* background-position: 50px 50px; */
+
+            /* 이미지 배치 기준 설정 */
+            /* background-origin: content-box; */
+            /* background-origin: border-box; */
+            background-origin: padding-box;
+
+            /* 이미지 고정 여부 설정 */
+            /* background-attachment: scroll; */
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    <h2>색상 스타일</h2>
+    <h3>background-color, background-clip</h3>
+    <div class="bg-clip" id="bg-clip1"></div>
+    <div class="bg-clip" id="bg-clip2"></div>
+    <div class="bg-clip" id="bg-clip3"></div>
+
+    <h3>background-image, background-repeat, background-size, background-position,
+        background-orgin, background-attachment</h3>
+    <div id="bg-img"></div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹문서구조 실습 시멘틱 구조</title>
+    <style>
+        div, div *{
+            border: 1px solid red;
+            box-sizing: border-box;
+        }
+
+        .wrap{
+            margin: 0 auto;
+            width: 600px;
+            height: 500px;
+        }
+
+        header{
+            height: 25%;
+        }
+
+        .header{
+            height: 80%;
+        }
+
+        .header div{
+            height: 100%;
+            float: left;
+        }
+
+        #header1, #header3{
+            width: 20%;
+        }
+
+        #header2{
+            width: 60%;
+        }
+        
+        nav{
+            height: 20%;
+            clear: both;
+        }
+
+        main{
+            height: 55%;
+        }
+
+        section{
+            height: 100%;
+            float: left;
+        }
+
+        #main1{
+            width: 25%;
+        }
+
+        #main2, #main3{
+            width: 37.5%;
+        }
+
+        footer{
+            height: 20%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <header>
+            <div class="header">
+                <div id="header1"></div>
+                <div id="header2"></div>
+                <div id="header3"></div>
+            </div>
+            <nav></nav>
+        </header>
+        <main>
+            <section id="main1"></section>
+            <section id="main2"></section>
+            <section id="main3"></section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>

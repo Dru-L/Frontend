@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrap{
+            width: 80%;
+            height: 500px;
+            border:2px solid #f00;
+            margin:0 auto;
+        }
+        .boxs{
+            border:2px solid #f00;
+            box-sizing: border-box;
+            clear: both;
+        }
+        #box1{
+            height: 20%;
+            padding: 7px;
+        }
+        #box2{
+            border: none;
+            height: 60%;
+        }
+        #box3{
+            height: 20%;
+        }
+
+        #box2-1, #box2-2{
+            border:2px solid #f00;
+            box-sizing: border-box;
+            float: left;
+            height: 100%;
+        }
+        #box2-1{
+            width:20%;
+        }
+        #box2-2{
+            width: 80%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div id="box1" class="boxs">
+            <h3>웹 문서 구조 실습 1</h3>
+        </div>
+        <div id="box2" class="boxs">
+            <div id="box2-1"></div>
+            <div id="box2-2"></div>
+        </div>
+        <div id="box3" class="boxs"></div>
+    </div>
+</body>
+</html>

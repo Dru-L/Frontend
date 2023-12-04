@@ -1,0 +1,434 @@
+/* 박스 모델 */
+/* width, height */
+#fixed-size{
+    border : 5px solid #ff0000;
+    /* width,height 콘텐츠의 너비와 높이를 지정한다. */
+    width: 200px;
+    height: 200px;
+    /* padding: 20px; */
+    /* 요소의 너비와 높이를 테두리를 기준으로 지정한다. */
+    box-sizing: border-box;
+}
+
+#variable-size{
+    border: 5px solid #ff0000;
+    width: 20%;
+    height: 200px;
+}
+
+/*display*/
+.display{
+    border: 1px solid #000;
+    width: 150px;
+    height: 50px;
+    margin: 10px;
+}
+
+.display-inline{
+    display: inline;
+}
+
+.display-block{
+    display: block;
+}
+
+.display-inline-block{
+    display: inline-block;
+}
+
+/* 여백 스타일 */
+.space{
+    width: 100px;
+    height: 100px;
+    background-color: beige;
+    /* display: inline-block; */
+}
+
+#padding1 {
+    padding: 20px;
+}
+
+#padding2 {
+    padding: 50px 20px 20px 30px;
+}
+
+/* margin */
+#margin1 {
+    margin : 50px;
+}
+
+#margin2 {
+    margin:60px 30px 50px 20px;
+}
+
+/* 테두리 스타일 */
+.border{
+    border: 10px solid;
+    width: 100px;
+    height: 100px;
+    margin:5px 0;
+}
+
+#border1{
+    border-style: none;
+}
+
+#border2{
+    border-style: hidden;
+    box-shadow: 10px 10px 5px 5px; 
+    /* box-shadow: 수평거리 수직거리 흐림정도 번짐정도 [색상 inset] */
+}
+
+#border3{
+    border-style:dashed;
+    /* border-width: 15px; */
+    /* border-top-width: 15px 10px; */
+    /* border-width: 15px 10px; */
+    border-width: 10px 20px 15px 30px;
+}
+
+#border4{
+    border-style: dotted;
+    /* border-color: #ff0000; */
+    /* border-top-color:#ff0000; */
+    border-color: #ff0000 #800080 #ffff00 #9acd32;
+}
+
+#border5{
+    /* border-style: double; */
+    /* border-top: 15px double blue; */
+    border: 15px double blue;
+}
+
+#border6{
+    border-style: groove;
+}
+
+#border7{
+    border-style: ridge;
+}
+
+#border8{
+    border-style: inset;
+}
+
+#border9{
+    border-style: outset;
+}
+
+#border10{
+    border-style: solid;
+    /* border-radius: 65px; */
+    /* border-top-left-radius: 65px; */
+    /* border-top-left-radius: 10px 40px */
+    border-radius: 50%;
+}
+
+/* 포지셔닝 */
+/* float, clear */
+.float{
+    border:1px solid;
+    width: 100px;
+    height: 100px;
+    float: right;
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+
+/* position */
+#outer{
+    position: relative;
+    top:10px;
+    left: 10px;
+    width: 300px;
+    height: 300px;
+    background-color: #9acd32;
+}
+
+#first{
+    position: absolute;
+    top:50px;
+    left: 50px;
+    width: 200px;
+    height: 200px;
+    background-color: #ffff00;
+}
+
+#second{
+    position: absolute;
+    top:50px;
+    left:50px;
+    width:100px;
+    height: 100px;
+    background-color: #ff0000;
+}
+
+#fixed{
+    position: fixed;
+    /* position: sticky; */
+    left:500px;
+    top:50px;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+
+
+/* visibility */
+.visibility {
+    border: 1px solid;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 5px;
+}
+
+#visibility1{
+    background-color: pink;
+}
+
+#visibility2{
+    background-color: skyblue;
+    visibility: hidden;
+    /* display: none; */
+}
+
+#visibility3{
+    background-color: beige;
+}
+
+/* z-index */
+#z-outer{
+    position: relative;
+    height: 250px;
+}
+
+.z-index{
+    width: 150px;
+    height: 100px;
+    border: 1px solid;
+    position: absolute;
+}
+
+#z-index1{
+    background-color: orange;
+    top:100px;
+    left:100px;
+    z-index: 100;
+}
+
+#z-index2{
+    background-color: blueviolet;
+    top:50px;
+    left:50px;
+    z-index: 9999;
+}
+
+#z-index3{
+    background-color: rgb(255, 141, 169);
+    top:0px;
+    left:00px;
+    z-index: 60;
+}
+
+/* 플렉스 박스 */
+.container{
+    width: 800px;
+    background-color: #eee;
+    display: flex;
+    border:1px solid;
+    margin-bottom:30px;
+}
+
+.box{
+    width: 120px;
+    padding:5px;
+    margin:5px;
+    background-color: #000;
+}
+
+.container p{
+    color: #fff;
+    text-align: center;
+}
+
+/* flex-direction */
+#fd-1{
+    flex-direction: row;
+    /* flex-direction: row-reverse; */
+    /* flex-direction: column; */
+    /* flex-direction: column-reverse; */
+}
+
+#fd-2{
+    flex-direction: row-reverse;
+}
+
+#fd-3{
+    flex-direction: column;
+}
+
+#fd-4{
+    flex-direction: column-reverse;
+}
+
+
+/* flex-wrap */
+#fw-1{
+    flex-wrap: nowrap;
+}
+
+#fw-2{
+    flex-wrap: wrap;
+}
+
+#fw-3{
+    flex-wrap: wrap-reverse;
+}
+
+/* flex-flow */
+#ff-1{
+    /* flex-flow: row nowrap; */
+    flex-flow: row-reverse wrap;
+}
+
+/* justify-content */
+#jc-1{
+    justify-content: flex-start; /*기본, 왼쪽 정렬*/
+}
+
+#jc-2{
+    justify-content: flex-end; /*오른쪽 정렬*/
+}
+
+#jc-3{
+    justify-content: center; /*가운데 정렬*/
+}
+
+#jc-4{
+    justify-content: space-between;
+}
+
+#jc-5{
+    justify-content: space-around;
+}
+
+
+/* align-items */
+#ai-1 {
+    height: 150px;
+    align-items: flex-start;
+}
+
+#ai-2 {
+    height: 150px;
+    align-items: flex-end;
+}
+
+#ai-3 {
+    height: 150px;
+    align-items: center;
+}
+
+#ai-4 {
+    height: 150px;
+    align-items: baseline;
+}
+
+#ai-5 {
+    height: 150px;
+    align-items: stretch;
+}
+
+
+/* CSS 그리드 레이아웃 */
+#cg-1 {
+    display: grid;
+    /* grid-template-columns: 200px 200px 200px; */
+    /* grid-template-rows: 100px 100px; */
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: repeat(auto-fit,minmax(200px, 1fr)); */
+    /* grid-template-columns: repeat(auto-fill,minmax(200px, 1fr)); */
+    /* 
+    repeat : 함수 괄호 안에는 (몇개만들것인지, 셀의 크기)
+    auto-fit : 화면에 맞게 채우는 것 
+    auto-fill : 화면에 최소 너비까지 늘어나고 다 채우면 빈공간이 생긴다.
+    */
+    /* grid-template-rows: minmax(100px,auto) 100px; */
+    grid-template-rows: minmax(100px,auto) minmax(100px,auto);
+    /* column-gap: 30px; */
+    /* row-gap: 20px; */
+    gap: 20px 30px;
+
+}
+
+.item {
+    background-color: silver;
+}
+
+.item:nth-child(even) {
+    background-color: whitesmoke;
+}
+/* 그리드 라인 */
+#cg-2{
+    display: grid;
+    width: 700px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,100px);
+}
+
+#gl1{
+    /* grid-column-start: 1; */
+    /* grid-column-end: 4; */
+    grid-column: 1/4;
+    background-color: #0066db;
+}
+
+#gl2{
+    /* grid-column: 1/2; */
+    grid-column-start: 1;
+    grid-row: 2/4;
+    background-color: #51cd32;
+}
+
+#gl3{
+    grid-column: 2/4;
+    grid-row-start: 2;
+    background-color: #ff9b19;
+}
+
+#gl4{
+    grid-column: 3/4;
+    grid-row-start: 3;
+    background-color: #ffe926;
+}
+
+/* 템플릿 영역 */
+#cg-3{
+    display: grid;
+    width: 700px;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,100px);
+    grid-template-areas: "ga1 ga1 ga1" "ga2 ga3 ga3" "ga2 . ga4";
+}
+
+#ga1{
+    background-color: #0066db;
+    grid-area: ga1;
+}
+
+#ga2{
+    background-color: #51cd32;
+    grid-area: ga2;
+}
+
+#ga3{
+    background-color: #ff9b19;
+    grid-area: ga3;
+}
+
+#ga4{
+    background-color: #ffe926;
+    grid-area: ga4;
+}
