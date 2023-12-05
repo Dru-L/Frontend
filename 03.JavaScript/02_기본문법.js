@@ -214,3 +214,55 @@ function opTest(){
     div4.innerHTML += `5 !== 5 : ${5 !== 5}<br>`; //false
     div4.innerHTML += `5 !== '5' : ${5 !== '5'}<br>`; //true
 }
+
+function forTest() {
+    let array = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+    let user = {
+        name: '홍길동',
+        age: 25,
+        height: 180.5
+    };
+    let div5 = document.getElementById('div5');
+
+    div5.innerHTML = '<h4>안녕하세요.</h4>';
+
+    // for 구문
+    // for (let i = 0; i < array.length; i++) {
+    //     div5.innerHTML += `${array[i]} `;
+    // }
+
+    // for in 구문
+    // 배열의 경우 반복 변수에 array의 index 값을
+    // 순서대로 담아서 반복시킨다.
+    // for (let i in array) {
+    //     console.log(i);
+
+    //     div5.innerHTML += `${array[i]} `;
+    // }
+
+    // for of 구문
+    // 배열의 경우 반복 변수에 array의 value 값을
+    // 순서대로 담아서 반복시킨다.
+    for(let value of array) {
+        div5.innerHTML += `${value} `;
+    }
+
+    div5.innerHTML += '<br><br>';
+
+    console.log(user);
+
+    // for in 구문
+    for (const key in user) {
+        console.log(key);
+        console.log(user[key]);
+        div5.innerHTML += 
+            `${key}, type: ${typeof (key)}, value: ${user[key]}<br>`;
+    }
+
+    // for of 구문
+    // 객체의 경우 for of 구문을 사용할 수 없다.
+    // for (const value of user) {
+    //     console.log(value);
+    // }
+
+}
