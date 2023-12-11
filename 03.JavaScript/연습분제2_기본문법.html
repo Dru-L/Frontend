@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기본 문법</title>
+    <style>
+        .area{
+            width: 98%;
+            height: 150px;
+            margin: 10px auto;
+            border: 1px solid #000;
+        }
+    </style>
+</head>
+<body>
+    <h1>기본 문법</h1>
+    <hr>
+    <h3>문제 1. 텍스트 필드에 작성한 문자열의 길이를 구하기</h3>
+    <fieldset>
+        <legend>보기</legend>
+        <input type="text" name="word" id="word" style="width:98%;" placeholder="글자를 작성해주세요.">
+    </fieldset>
+    <div id="box1" class="area"></div>
+    <button onclick="checkWord();">확인하기</button>
+
+    <script>
+        function checkWord(){
+            let word = document.getElementById('word').value;
+            let box1 = document.getElementById('box1');
+
+            box1.innerHTML = `보기의 문자열 길이는 ${word.length}입니다.`
+            box1.style.borderColor = 'red';
+        }
+    </script>
+
+    <hr>
+
+    <h3>문제 2. 다음 보기에 있는 문자열을 콤마(,)를 기준으로 잘라내어 하나하나 출력</h3>
+    <fieldset>
+        <legend>보기</legend>
+        <input type="text" name="wordArray" id="wordArray" style="width:98%;">
+    </fieldset>
+    <div id="box2" class="area"></div>
+    <button onclick="divideWord();">확인하기</button>
+
+    <script>
+        function divideWord(){
+            let wordArray = document.getElementById('wordArray').value;
+            let box2 = document.getElementById('box2');
+            let num = 1;
+            
+            let array = wordArray.split(',');
+
+            for(let value of array){
+                box2.innerHTML += `${num++}. ${value}<br>`;
+            }
+
+            // for(let i = 0; i<array.length; i++){
+            //     box2.innerHTML += `${i+1}. ${array[i]}<br>`;
+            // }
+
+            box2.style.borderColor = 'red';
+        }
+    </script>
+
+    <!-- <h3>문제 2. 다음 보기에 있는 문자열을 콤마(,) 기준으로 잘라내어 하나하나 출력</h3>
+    <fieldset>
+        <legend>보기</legend>
+        <p id="p">콜라,사이다,햄버거,피자,한약</p>
+    </fieldset>
+
+    <div id="div2" class="area"></div>
+
+    <button onclick="btn2click();">확인하기</button>
+    <script>
+        function btn2click(){
+        let p = document.getElementById('p').innerHTML;
+
+        console.log(p);
+        let div2 = document.getElementById('div2');
+
+        let arr = p.split(',');
+    }
+    </script> -->
+
+    <h3>문제 3. 간이 계산기 만들기</h3>
+    <fieldset>
+        <label for="firstNum">첫번째 값 : </label>
+        <input type="number" name="firstNum" id="firstNum">
+        <br>
+        <label for="secondNum">두번째 값 : </label>
+        <input type="number" name="secondNum" id="secondNum">
+    </fieldset>
+    <br>
+    <button onclick="setCal('+')">+</button>
+    <button onclick="setCal('-')">-</button>
+    <button onclick="setCal('x')">x</button>
+    <button onclick="setCal('/')">/</button>
+    <button onclick="setCal('%')">%</button>
+    <br>
+    <div id="box3"></div>
+
+    <script>
+        function setCal(cal){
+            let box3 = document.getElementById('box3');
+            let a = document.getElementById('firstNum').valueAsNumber;
+            let b = document.getElementById('secondNum').valueAsNumber;
+            // let a = Number(document.getElementById('firstNum').value);
+            // let b = Number(document.getElementById('secondNum').value);
+            // 강제 형변환 하는 방법도 있다.
+            let calcs = 0;
+
+            switch(cal){
+                case '+' :
+                    calcs = a + b;
+                    break;
+                case '-' :
+                    calcs = a - b;
+                    break;
+                case 'x' :
+                    calcs = a * b;
+                    break;
+                case '/' :
+                    calcs = a / b;
+                    break;
+                case '%' :
+                    calcs = a % b;
+                    break;
+            }
+
+            box3.innerHTML = `계산결과 : ${calcs}`
+        }
+    </script>
+</body>
+</html>

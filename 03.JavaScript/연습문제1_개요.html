@@ -49,7 +49,6 @@
             div2.style.height = size;
         }
     </script>
-    
 
     <!-- <div id="box" class="area"></div>
     <button onclick="boxSizing1();">50x50</button>
@@ -83,14 +82,17 @@
 
     <h3>문제 3. HTML 태그에 접근하기</h3>
     <p>텍스트 박스로 입력받은 데이터를 가져와서 출력하기<br>(단, 구매자는 태그이름, 상품명은 아이디, 구매가격은 name값으로 접근)</p>
-    <label for="userName">구매자 : </label>
-    <input type="text" name ="userName" id="userName">
-    <br><br>
-    <label for="productName">상품명 : </label>
-    <input type="text" name ="productName" id="productName">
-    <br><br>
-    <label for="productPrice">가격 : </label>
-    <input type="number" name="productPrice" id="productPrice">
+    
+    <form>
+        <label for="userName">구매자 : </label>
+        <input type="text" name ="userName" id="userName">
+        <br><br>
+        <label for="productName">상품명 : </label>
+        <input type="text" name ="productName" id="productName">
+        <br><br>
+        <label for="productPrice">가격 : </label>
+        <input type="number" name="productPrice" id="productPrice">
+    </form>
     <br><br>
     <button onclick="productInfo();">입력값 출력하기</button>
     <div id="div3"></div>
