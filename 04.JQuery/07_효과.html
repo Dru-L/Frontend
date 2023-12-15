@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>효과</title>
+    <style>
+        .menu{
+            border:1px solid;
+            width:300px;
+            height: 30px;
+            text-align: center;
+            padding-top: 10px;
+            border-radius: 10px;
+            cursor: pointer;
+            margin-bottom: 5px;
+        }
+        .content{
+            border:1px solid;
+            width: 300px;
+            height: 200px;
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <h2>효과</h2>
+
+    <h3>1. show(), hide(), toggle()</h3>
+    <button id="btnShow">show()</button>
+    <button id="btnHide">hide()</button>
+    <button id="btnToggle">toggle()</button>
+    <br><br>
+    <img id="img1" src="../resources/image/city1.PNG" width="500px">
+
+
+    <h3>2. slideDown(), slideUp(), slideToggle()</h3>
+    <div class="menu">1 번째 메뉴</div>
+    <p class="content"></p>
+    <div class="menu">2 번째 메뉴</div>
+    <p class="content"></p>
+    <div class="menu">3 번째 메뉴</div>
+    <p class="content"></p>
+    <div class="menu">4 번째 메뉴</div>
+    <p class="content"></p>
+    <div class="menu">5 번째 메뉴</div>
+    <p class="content"></p>
+
+
+    <h3>3. fadeIn(), fadeOut(), fadeToggle(), fadeTo()</h3>
+    <button id="btnFadeIn">fadeIn</button>
+    <button id="btnFadeOut">fadeOut</button>
+    <button id="btnFadeToggle">fadeToggle</button>
+
+    <br><br>
+    
+    <img id="img2" src="../resources/image/forest1.PNG" width="500px">
+
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./07_효과.js"></script>
+</body>
+</html>

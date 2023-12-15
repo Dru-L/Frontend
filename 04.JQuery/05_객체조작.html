@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 조작</title>
+    <style>
+        .item{
+            width:100px;
+            height:100px;
+            background-color: rgb(34, 231, 149);
+            margin:10px;
+            display: inline-block;
+        }
+
+        .bg-hotpink{
+            background-color: rgb(177, 128, 255);
+        }
+    </style>
+</head>
+<body>
+    <h2>객체 조작</h2>
+    <h3>1. Content 설정</h3>
+    <h4>1) html() 메소드</h4>
+
+    <h5 id="content1"><a>네이버로</a></h5>
+    <h5 id="content2"></h5>
+
+    <p class="content">html() 테스트 1</p>
+    <p class="content">html() 테스트 2</p>
+    <p class="content">html() 테스트 3</p>
+
+    <h4>2) text() 메소드</h4>
+    <h5 id="content3"><a>네이버로</a></h5>
+    <h5 id="content4"></h5>
+
+    <p class="content2">text() 테스트 1</p>
+    <p class="content2">text() 테스트 2</p>
+    <p class="content2">text() 테스트 3</p>
+
+    <h3>2. 요소 추가 </h3>
+    <h4>1) 요소 생성 </h4>
+
+    <div id="div1"></div>
+
+    <h4>2) 요소 추가</h4>
+    <p>선택자에 의해 선택된 요소를 기준으로 다른 요소를 추가하는 메소드이다.</p>
+
+    <h2 id="add1"><span>A</span></h2>
+    <h2 id="add2"><span>A</span></h2>
+    <h2 id="add3"><span>A</span></h2>
+    <h2 id="add4"><span>A</span></h2>
+
+    <h4>3) 요소 추가 2</h4>
+    <p>특정 요소를 선택자로 지정한 요소에 추가하는 메소드이다.</p>
+
+    <h2 id="add5"><span>A</span></h2>
+    <h2 id="add6"><span>A</span></h2>
+    <h2 id="add7"><span>A</span></h2>
+    <h2 id="add8"><span>A</span></h2>
+
+    
+    <h3>3. 요소 복제</h3>
+    <p>선택자로 선택된 요소를 복사하는 메소드이다.</p>
+    <div>
+        <div id="item1" class="item"> </div>
+    </div>
+    <button id="btnClone">복제</button>
+
+    <div id="cloneResult"></div>
+
+
+    <h3>4. 요소 삭제</h3>
+    <p>선택자에 의해 선택된 요소를 제거하는 메소드이다.</p>
+
+    <div>
+        <div id="item2" class="item"></div>
+    </div>
+
+    <button id="btnRemove">Remove</button>
+    <button id="btnDetach">Detach</button>
+    <button id="btnEmpty">Empty</button>
+
+    <div id="removeResult"></div>
+
+
+    <h3>5. 배열 관리</h3>
+    <p>
+        객체나 배열을 반복적으로 처리할 때 사용하는 메소드이다.
+    </p>
+    <div id="eachTest">
+        <h4>배열 관리 테스트 1</h4>
+        <h4>배열 관리 테스트 2</h4>
+        <h4>배열 관리 테스트 3</h4>
+        <h4>배열 관리 테스트 4</h4>
+    </div>
+
+
+
+    <script src="./js/jquery-3.7.1.js"></script>
+    <script src="./05_객체조작.js"></script>
+</body>
+</html>

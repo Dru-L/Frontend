@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery 선택자2</title>
-
     <script src="./js/jquery-3.7.1.js"></script>
+
 </head>
 <body>
     <h2>jQuery 선택자2</h2>
@@ -22,7 +22,64 @@
         <h3>div의 자손 2</h3>
         <h3>div의 자손 3</h3>
     </div>
+    
+    <h3>5. 속성 선택자</h3>
+    <div id="div1">
+        <form>
+            <input type="text">
+            <input type="number" class="test1 test2">
+            <input type="radio">
+            <input type="checkbox">
+            <input type="button" class="test3" value="버튼">
+        </form>
+    </div>
 
+    <h3>6. 입력 양식 선택자</h3>
+    <div id="div2">
+        <form>
+            <input type="text">
+            <input type="button">
+            <input type="checkbox">
+            <input type="file">
+            <br><br>
+            <input type="image" src="../resources/image/flower1.PNG">
+        </form>
+    </div>
+
+    <h3>7. 입력 양식 상태에 대한 선택자</h3>
+    <div id="div3">
+        <form>
+            <input type="text">
+            <input type="text">
+            <br><br>
+            <input type="button" value="활성화">
+            <input type="button" value="비활성화" disabled>
+            <br><br>
+            <label><input type="checkbox" checked>게임</label>
+            <label><input type="checkbox">음악</label>
+            <label><input type="checkbox">영화</label>
+            <br><br>
+            <label for="">국가 : </label>
+            <select id="national">
+                <option value="한국">한국</option>
+                <option value="중국">중국</option>
+                <option value="일본" selected>일본</option>
+            </select>
+
+            <input type="text" id="result" readonly>
+        </form>
+    </div>
+    
+    <h3>8.attr(), prop()</h3>
+    <div>
+        <form>
+            <label for="cb1">선택 :</label>
+            <input type="checkbox" id="cb1" checked>
+
+            <label for="cb2">비선택 :</label>
+            <input type="checkbox" id="cb2" checked>
+        </form>
+    </div>
     
     <script src="./03_선택자2.js"></script>
 </body>
